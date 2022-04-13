@@ -16,6 +16,8 @@ O Objetivo desse projeto foi um cadastro de pessoas, contendo nome, email, telef
 2. Node.js 
 
 
+
+
   
   
 
@@ -23,7 +25,17 @@ O Objetivo desse projeto foi um cadastro de pessoas, contendo nome, email, telef
 
   
 
-**1. Instalar o Angular CLI pelo terminal** 
+**1. Clonar a aplicação** 
+
+  
+
+```bash 
+
+https://github.com/Jbisatto/Avalia-o-Angular.git 
+
+``` 
+
+**2. Instalar o Angular CLI pelo terminal** 
 
 ```bash 
 
@@ -31,15 +43,12 @@ npm install -g @angular/cli
 
 ``` 
 
-**2. Instalar o Node**
+
+
+**3. Instalar o Node**
 
 
 Caso não tenha o Node instalado, acesse https://nodejs.org/en/ e instale.
-
-  
-
-
-
 
 
 ## Execução 
