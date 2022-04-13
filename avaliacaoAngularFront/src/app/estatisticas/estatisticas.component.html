@@ -1,0 +1,17 @@
+<div id="divTableEstatisticas">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>Numero de Habitantes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of myMap | keyvalue">
+                <td>{{p.key}}</td>
+                <td>{{p.value}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

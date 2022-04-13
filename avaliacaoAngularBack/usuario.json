@@ -1,0 +1,92 @@
+{
+  "cadastroPessoas": [
+    {
+      "id": 1,
+      "nome": "joao",
+      "telefone": "04799158513",
+      "email": "joao@gmail.com",
+      "estado": "Espírito Santo",
+      "cidade": "Águia Branca"
+    },
+    {
+      "id": 2,
+      "nome": "adda",
+      "telefone": "312",
+      "email": "awdadw@ .",
+      "estado": "Alagoas",
+      "cidade": "Arapiraca"
+    },
+    {
+      "id": 3,
+      "nome": "dwq123",
+      "telefone": "21",
+      "email": "dasd@ .",
+      "estado": "Acre",
+      "cidade": "Acrelândia"
+    },
+    {
+      "id": 6,
+      "nome": "dwdwda",
+      "telefone": "11111111111",
+      "email": "jeffes@gmail.com",
+      "estado": "Amapá",
+      "cidade": "Ferreira Gomes"
+    },
+    {
+      "id": 8,
+      "nome": "qqdq",
+      "telefone": "13123",
+      "email": "dqdq",
+      "estado": "Amapá",
+      "cidade": "Calçoene"
+    },
+    {
+      "id": 9,
+      "nome": "Daiane",
+      "telefone": "04799915851",
+      "email": "daine@gmail.com",
+      "estado": "Ceará",
+      "cidade": "Acopiara"
+    },
+    {
+      "id": 10,
+      "nome": "Jeferspn",
+      "telefone": "44444444444",
+      "email": "jeffe@gmail.com",
+      "estado": "Pará",
+      "cidade": "Ananindeua"
+    },
+    {
+      "id": 11,
+      "nome": "João",
+      "telefone": "22222222222",
+      "email": "joao@gamil.com",
+      "estado": "Bahia",
+      "cidade": "Água Fria"
+    },
+    {
+      "id": 12,
+      "nome": "teste",
+      "telefone": "22222222222",
+      "email": "tete@gmail.com",
+      "estado": "Espírito Santo",
+      "cidade": "Aracruz"
+    },
+    {
+      "id": 13,
+      "nome": "Jefferson",
+      "telefone": "047999158513",
+      "email": "jefferson@gmail.com",
+      "estado": "Amapá",
+      "cidade": "Cutias"
+    },
+    {
+      "id": 14,
+      "nome": "wdawdawd",
+      "telefone": "111111111111",
+      "email": "dawd@bvbv.wewe",
+      "estado": "Alagoas",
+      "cidade": "Atalaia"
+    }
+  ]
+}

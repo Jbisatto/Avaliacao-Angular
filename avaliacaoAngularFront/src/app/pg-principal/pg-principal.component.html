@@ -1,0 +1,66 @@
+
+<div id="divTitulo">
+    <h1>Cadastro de Pessoas</h1>
+</div>
+<div id="divPrincipal">
+    <form [formGroup]="formulario">
+        <input type="text" name="nome" placeholder="Nome" class="form-control" formControlName="campoNome"
+            (blur)="validaNome()">
+
+        <input type="text" [textMask]="{mask: emailMask}" name="email" placeholder="E-Mail" class="form-control"
+            formControlName="campoEmail"(blur)="validaEmail()">
+
+        <input type="text" mask="(000) 00000-0000" name="telefone" placeholder="Ex. (000) 00000-0000" value="" class="form-control"
+            formControlName="campoTelefone"(blur)="validaTelefone()">
+
+        <select class="form-control" formControlName="cbxEstado" name="cbxEstado" (change)="selecaoEstado()">
+            <option value="A">Selecione um Estado</option>
+            <option *ngFor="let estado of estados,let i = index" [value]="i">
+                {{estado.nome}}
+            </option>
+        </select>
+
+        <select class="form-control" formControlName="cbxCidade" name="cbxCidade" (change)="selecaoCidade()">
+            <option value="B">Selecione uma Cidade</option>
+            <option *ngFor="let cidade of cidades,let i = index" [value]="i">
+                {{cidade.nome}}
+            </option>
+        </select>
+
+        <input type="button" *ngIf="btnVisivel" value="Cadastrar" class="btn btn-primary" (click)="cadastrar()">
+        <input type="button" *ngIf="!btnVisivel" value="Alterar" class="btn btn-warning" (click)="alterarPessoa()">
+        <input type="button" *ngIf="!btnVisivel" value="Remover" class="btn btn-danger" (click)="removerPessoa()">
+        <input type="button" *ngIf="!btnVisivel" value="Cancelar" class="btn btn-secondary" (click)="cancelar()">
+
+    </form>
+
+</div>
+
+<hr>
+
+<div id="divTable">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th>Estado</th>
+                <th>Cidade</th>
+                <th>Seleconar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of pessoas; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{p.nome}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.telefone}}</td>
+                <td>{{p.estado}}</td>
+                <td>{{p.cidade}}</td>
+                <td><button class="btn btn-secondary" (click)="selecionarPessoa(i)">Selecionar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

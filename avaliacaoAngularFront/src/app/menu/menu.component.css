@@ -1,0 +1,3 @@
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-brand {
+    color: white;
+}
