@@ -1,4 +1,11 @@
-#divTableEstatisticas{
+#divTableEstatisticas {
     margin: auto;
     width: 500px;
+}
+
+table {
+    margin-top: 10px;
+    color: aliceblue;
+    --bs-table-striped-color: aliceblue;
+
 }

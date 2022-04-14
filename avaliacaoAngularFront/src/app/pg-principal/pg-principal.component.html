@@ -1,6 +1,6 @@
 
 <div id="divTitulo">
-    <h1>Cadastro de Pessoas</h1>
+    <h1 style="color: aliceblue">Cadastro de Pessoas</h1>
 </div>
 <div id="divPrincipal">
     <form [formGroup]="formulario">
@@ -14,15 +14,15 @@
             formControlName="campoTelefone"(blur)="validaTelefone()">
 
         <select class="form-control" formControlName="cbxEstado" name="cbxEstado" (change)="selecaoEstado()">
-            <option value="A">Selecione um Estado</option>
-            <option *ngFor="let estado of estados,let i = index" [value]="i">
+            <option value="A" class="a1">Selecione um Estado</option>
+            <option *ngFor="let estado of estados,let i = index" [value]="i" class="a1" >
                 {{estado.nome}}
             </option>
         </select>
 
         <select class="form-control" formControlName="cbxCidade" name="cbxCidade" (change)="selecaoCidade()">
-            <option value="B">Selecione uma Cidade</option>
-            <option *ngFor="let cidade of cidades,let i = index" [value]="i">
+            <option value="B" class="a1">Selecione uma Cidade</option>
+            <option *ngFor="let cidade of cidades,let i = index" [value]="i" class="a1">
                 {{cidade.nome}}
             </option>
         </select>

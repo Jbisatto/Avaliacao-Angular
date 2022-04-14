@@ -3,11 +3,9 @@
     text-align: center;
     margin: auto;
     width: 300px;
+    background-color: rgb(111, 95, 255);
 }
-#divTable{
-    margin: auto;
-    width: 900px;
-}
+
 #divTitulo{
     text-align: center;
     margin: auto;
@@ -19,7 +17,34 @@
 
 input[type="text"]{
     border: 1px solid black;
+    color: aliceblue;
+    background-color: rgb(111, 95, 255);
 }
+input::placeholder {
+    color: aliceblue;
+  }
+
 select{
     border: 1px solid black;
+    background-color: rgb(111, 95, 255);
+    color: aliceblue;
 }
+select::-moz-focus-inner{
+    background-color: rgb(111, 95, 255);
+    color: aliceblue;
+}
+.a1{
+    background-color: rgb(111, 95, 255);
+    color: aliceblue;
+}
+table{
+    color: aliceblue;
+    --bs-table-striped-color: aliceblue;
+}
+input.btn-primary, button.btn-secondary, input.btn-secondary{
+    background-color: rgb(111, 95, 255);
+    color: aliceblue ;
+    border-color: black;
+}
+
+

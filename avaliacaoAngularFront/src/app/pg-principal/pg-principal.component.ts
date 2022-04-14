@@ -30,7 +30,7 @@ export class PgPrincipalComponent implements OnInit {
     cbxCidade: new FormControl(null, Validators.required),
     campoNome: new FormControl(null, [Validators.required, Validators.minLength(4), Validators.pattern('^[a-zA-Zà-úÀ-Ú_ ]*$')]),
     campoEmail: new FormControl(null, [Validators.required, Validators.pattern("^[a-z0-9._-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
-    campoTelefone: new FormControl()
+    campoTelefone: new FormControl(null, Validators.required)
 
   });
 
@@ -77,7 +77,7 @@ export class PgPrincipalComponent implements OnInit {
 
 
   cadastrar = () => {
-    if (this.verificaPessoa()) {
+    if (this.verificaPessoa('C')) {
       this.servico.cadastrarPessoa(this.objPessoa)
         .subscribe(retorno => this.pessoas.push(retorno));
       this.limparCombo();
@@ -87,16 +87,32 @@ export class PgPrincipalComponent implements OnInit {
   }
 
 
-  verificaPessoa = () => {
+  verificaPessoa = (tipo: string) => {
     console.log(this.formulario.value.cbxCidade)
     if (this.formulario.valid && this.validaCbxEstado() && this.validaCbxCidade()) {
-      Swal.fire('Boa!', 'Deu tudo certo!', 'success')
-      this.validaFormulario();
-      return true
+      if (this.verificaUsuarioIgual(tipo)) {
+        Swal.fire('Boa!', 'Deu tudo certo!', 'success')
+        this.validaFormulario();
+        return true
+      } else {
+        Swal.fire('Erro!', 'Nome Usuário já está cadastrado!!!', 'error')
+      }
     } else {
       Swal.fire('Erro!!!', 'Preencha corretamente os campos', 'error')
-      return false
     }
+    return false
+  }
+  verificaUsuarioIgual = (tipo: string) => {
+    for (let p of this.pessoas) {
+      if (this.formulario.value.campoNome == p.nome) {
+        if (tipo == 'A' && this.formulario.value.campoNome == this.pessoas[this.indicePessoa].nome) {
+          return true;
+        } else {
+          return false
+        }
+      }
+    }
+    return true
   }
 
   verificaCampos() {
@@ -208,7 +224,8 @@ export class PgPrincipalComponent implements OnInit {
   }
 
   alterarPessoa = () => {
-    if (this.verificaPessoa()) {
+    this.objPessoa.id=this.pessoas[this.indicePessoa].id;
+    if (this.verificaPessoa('A')) {
       this.servico.alterarPessoaServico(this.objPessoa)
         .subscribe(retorno => this.pessoas[this.pessoas.findIndex((p => p.id == this.objPessoa.id))] = retorno);
       this.limparCombo();
