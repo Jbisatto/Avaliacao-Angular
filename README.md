@@ -29,7 +29,7 @@ O Objetivo desse projeto foi um cadastro de pessoas, contendo nome, email, telef
 
 ```bash 
 
-https://github.com/Jbisatto/Avalia-o-Angular.git 
+https://github.com/Jbisatto/Avaliacao-Angular.git 
 
 ``` 
 
